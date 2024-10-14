@@ -20,7 +20,7 @@ const PORT=process.env.PORT || 5000
 
 
 app.use(cors({
-    origin: "*",
+    origin: "https://know-more.onrender.com",
     methods: ["GET", "POST", "DELETE"],
     allowedHeaders: ["Content-Type"],
     credentials: true
