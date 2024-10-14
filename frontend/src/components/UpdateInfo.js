@@ -11,7 +11,7 @@ const UpdateInfo =()=>{
     const navigate = useNavigate();
     const getData=async ()=>{
         try{
-            const response= await Axios.get(`/api/updateinfo/${userId}`);
+            const response= await Axios.get(`${process.env.API_URL}/updateinfo/${userId}`);
             const {name,email} = response.data;
             setNewName(name);
             setNewEmail(email);   
@@ -25,7 +25,7 @@ const UpdateInfo =()=>{
         e.preventDefault();
         console.log(newName)
         try{
-            await Axios.post(`/api/updateinfo/${userId}`, {
+            await Axios.post(`${process.env.API_URL}/updateinfo/${userId}`, {
                 name: newName,
                 email: newEmail,
                 password: newPassword

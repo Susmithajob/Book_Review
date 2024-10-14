@@ -12,7 +12,7 @@ const SignInPage =()=>{
     const signIn = async (e) => {
         e.preventDefault();
         try{
-          const res = await Axios.post('/api/signin', {
+          const res = await Axios.post(`${process.env.API_URL}/signin`, {
             email,
             password
           })

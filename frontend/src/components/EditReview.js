@@ -13,7 +13,7 @@ const EditReview = ()=>{
     const updateBook = async (e) => {
         e.preventDefault();
         try{
-          const response = await Axios.put('/api/updatebook', {
+          const response = await Axios.put(`${process.env.API_URL}/updatebook`, {
             newReview,
             newRating,
             bookId,

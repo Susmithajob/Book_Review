@@ -15,7 +15,7 @@ const AddBook = ()=>{
         try{
           const token = localStorage.getItem('token');
           
-          const response = await Axios.post('/api/addbook', {
+          const response = await Axios.post(`${process.env.API_URL}/addbook`, {
             bookName,
             author,
             reviewText,

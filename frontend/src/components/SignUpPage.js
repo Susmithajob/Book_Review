@@ -12,7 +12,7 @@ const SignUpPage = ()=>{
     const signUp = async (e) => {
         e.preventDefault();
         try {
-        const response = await Axios.post('/api/signup', {
+        const response = await Axios.post(`${process.env.API_URL}/signup`, {
           name,
           email,
           password

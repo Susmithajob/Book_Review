@@ -16,7 +16,7 @@ const BookDetails = (props)=>{
 
     const deleteReview = async () => {
         try {
-            await axios.delete('/api/deletebook', {
+            await axios.delete(`${process.env.API_URL}/deletebook`, {
                 data: { bookId, userId }
             });
             alert('Review deleted successfully');
