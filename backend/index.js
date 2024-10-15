@@ -13,7 +13,7 @@ import jwt from "jsonwebtoken";
 
 dotenv.config();
 app.use(express.json());
-app.use('/api', api);
+
 
 const PORT=process.env.PORT || 5000
 
@@ -26,6 +26,7 @@ app.use(cors({
     credentials: true
 }));
 app.use(bodyParcer.json());
+app.use('/api', api);
 
 
 //Connecting to server and database
