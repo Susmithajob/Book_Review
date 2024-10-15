@@ -11,7 +11,7 @@ const UpdateInfo =()=>{
     const navigate = useNavigate();
     const getData=async ()=>{
         try{
-            const response= await Axios.get(`${process.env.API_URL}/updateinfo/${userId}`);
+            const response= await Axios.get(`${process.env.REACT_APP_API_URL}/updateinfo/${userId}`);
             const {name,email} = response.data;
             setNewName(name);
             setNewEmail(email);   
