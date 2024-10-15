@@ -25,7 +25,7 @@ const UpdateInfo =()=>{
         e.preventDefault();
         console.log(newName)
         try{
-            await Axios.post(`${process.env.API_URL}/updateinfo/${userId}`, {
+            await Axios.post(`${process.env.REACT_APP_API_URL}/updateinfo/${userId}`, {
                 name: newName,
                 email: newEmail,
                 password: newPassword

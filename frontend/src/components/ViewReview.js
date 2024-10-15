@@ -10,7 +10,7 @@ const ViewReview =()=>{
     const [searchBook,setSearchBook] = useState('');
     const getBook= async () => {  
       try {
-         const response = await Axios.get(`https://knowmore.onrender.com/api/getbook`)
+         const response = await Axios.get(`${process.env.REACT_APP_API_URL}/getbook`)
          setBooks(response.data);
     
       } catch (error) {
@@ -20,7 +20,7 @@ const ViewReview =()=>{
     }
     const searchBookName = async ()=>{
       try {
-        const response = await Axios.get(`${process.env.API_URL}/searchbook`, {
+        const response = await Axios.get(`${process.env.REACT_APP_API_URL}/searchbook`, {
           params: { bookName: searchBook },
         })
            const result = response.data;
