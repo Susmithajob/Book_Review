@@ -34,9 +34,9 @@ const EditReview = ()=>{
         <div className="border-2 border-black p-6 mx-auto w-2/3 md:w-96 sm:w-72 w-min-60 mt-4 rounded-lg bg-amber-50/20">
         <form onSubmit={updateBook}>
             <label className="text-white text-xl">Name of Book</label><br></br>
-            <input className="w-full border-gray-100 rounded-md bg-amber-100 mt-1 text-lg pl-2"value={bookName} type="text" readOnly></input><br></br>
+            <input className="w-full border-gray-100 rounded-md bg-amber-100 mt-1 text-lg pl-2"value={bookName} type="text"></input><br></br>
             <label className="text-white text-xl">Name of Author</label><br></br>
-            <input className="w-full border-gray-100 rounded-md bg-amber-100 mt-1 text-lg pl-2" value={author} type="text" readOnly></input><br></br>
+            <input className="w-full border-gray-100 rounded-md bg-amber-100 mt-1 text-lg pl-2" value={author} type="text" ></input><br></br>
             <label className="text-white text-xl">Your Review</label><br></br>
             <input className="w-full border-gray-100 rounded-md bg-amber-100 mt-1 text-lg pl-2" value={newReview} type="text" onChange={(e) => { setNewReview(e.target.value) }}></input><br></br>
             <label className="text-white text-xl">Your Rating</label><br></br>
